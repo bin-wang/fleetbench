@@ -24,6 +24,7 @@
           echo "*" > .bazelisk_cache/.gitignore
         fi
 
+        alias bazel=bazelisk
         echo "Bazelisk cache set to local"
       '';
     in
