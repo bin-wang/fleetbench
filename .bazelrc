@@ -90,7 +90,7 @@ build:riscv_gcc --cpu=riscv64
 build:riscv_gcc --repo_env=CC
 build:riscv_gcc --repo_env=CXX
 build:riscv_gcc --define=pfm=0
-build:rsicv_gcc --compilation_mode=opt
+build:riscv_gcc --compilation_mode=opt
 build:riscv_gcc --copt='-O3'
 build:riscv_gcc --copt='-march=rv64gc'
 build:riscv_gcc --copt='-fno-strict-aliasing'
