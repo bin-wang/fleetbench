@@ -13,7 +13,10 @@
       crossPkgs = pkgs.pkgsCross.riscv64;
 
       commonPackages = [
+        pkgs.autoconf
+        pkgs.automake
         pkgs.bazelisk
+        pkgs.libtool
       ];
 
       commonShellHook = ''
@@ -62,6 +65,7 @@
           in
           pkgs.mkShellNoCC {
             packages = commonPackages ++ [
+              pkgs.python313
               crossPkgs.buildPackages.llvmPackages_22.clang
               crossPkgs.buildPackages.llvmPackages_22.bintools
               linkerWrapper
