@@ -140,7 +140,7 @@ http_archive(
     build_file = "@//fleetbench:libnuma.BUILD.bazel",
     patch_cmds = [
         "./autogen.sh",
-        "./configure",
+        "case \"$CC\" in *riscv64*) ./configure --host=riscv64-unknown-linux-gnu ;; *) ./configure ;; esac",
         # clang does not support the symver attribute
         "sed -i -e 's/\\(#define HAVE_ATTRIBUTE_SYMVER 1\\)/#ifndef __clang__\\n\\1\\n#endif/' config.h",
     ],
