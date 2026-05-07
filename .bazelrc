@@ -86,14 +86,14 @@ build:westmere --copt='-msse4.2'
 build:arm --copt='-mtune=generic'
 
 # RISC-V GCC Configuration
-build:riscv_gcc --cpu=riscv64
-build:riscv_gcc --repo_env=CC
-build:riscv_gcc --repo_env=CXX
-build:riscv_gcc --define=pfm=0
-build:riscv_gcc --compilation_mode=opt
-build:riscv_gcc --copt='-O3'
-build:riscv_gcc --copt='-march=rv64gc'
-build:riscv_gcc --copt='-fno-strict-aliasing'
-build:riscv_gcc --copt='-momit-leaf-frame-pointer'
-build:riscv_gcc --cxxopt='-fsized-deallocation'
-build:riscv_gcc --copt='-fPIE'
+build:riscv-gcc --cpu=riscv64
+build:riscv-gcc --repo_env=CC
+build:riscv-gcc --repo_env=CXX
+build:riscv-gcc --define=pfm=0
+build:riscv-gcc --compilation_mode=opt
+build:riscv-gcc --copt='-O3'
+build:riscv-gcc --copt='-march=rv64gc'
+build:riscv-gcc --copt='-fno-strict-aliasing'
+build:riscv-gcc --copt='-momit-leaf-frame-pointer'
+build:riscv-gcc --cxxopt='-fsized-deallocation'
+build:riscv-gcc --copt='-fPIE'
