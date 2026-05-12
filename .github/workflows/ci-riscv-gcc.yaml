@@ -16,6 +16,6 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@ef8a148080ab6020fd15196c2084a2eea5ff2d25  # v22
 
-      - name: Build swissmap
+      - name: Build all targets
         run: |
-          nix develop .#gcc --command bazel build --config=riscv-gcc //fleetbench/swissmap:swissmap_benchmark
+          nix develop .#gcc --ignore-env --command bazelisk build --config=riscv-gcc //...
